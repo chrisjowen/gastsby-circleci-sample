@@ -32,6 +32,8 @@ jobs:
 
       # Build production version
       - run: npm run build
+      - run: ls public/
+
 
       # Deploy using SSH/Ansible or deploy to a SASS service like S3 or netlify
 

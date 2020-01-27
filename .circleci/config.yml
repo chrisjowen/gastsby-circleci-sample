@@ -12,26 +12,26 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
+      # - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies- # fallback to using the latest cache if no exact match is found
+      # # Download and cache dependencies
+      # - restore_cache:
+      #     keys:
+      #       - v1-dependencies-{{ checksum "package.json" }}
+      #       - v1-dependencies- # fallback to using the latest cache if no exact match is found
 
-      - run: npm install
+      # - run: npm install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests if you have them!
-      # - run: npm run test
+      # # run tests if you have them!
+      # # - run: npm run test
 
-      # Build production version
-      - run: npm run build
+      # # Build production version
+      # - run: npm run build
 
       # Deploy using SSH/Ansible or deploy to a SASS service like S3 or netlify
 

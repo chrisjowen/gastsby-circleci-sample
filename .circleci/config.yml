@@ -41,4 +41,4 @@ jobs:
           fingerprints:
             - "8c:b1:28:88:d7:44:ec:d1:b0:26:7a:52:b6:72:42:2e"
 
-      - run: ssh chris@195.201.109.178 ls
+      - run: ssh  -o "StrictHostKeyChecking no" chris@195.201.109.178 ls

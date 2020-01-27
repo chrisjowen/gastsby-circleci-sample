@@ -33,12 +33,10 @@ jobs:
       # Build production version
       - run: npm run build
 
-  deploy:
-    # Deploy using SSH/Ansible or deploy to a SASS service like S3 or netlify
+      # Deploy using SSH/Ansible or deploy to a SASS service like S3 or netlify
 
-    # Here is a standard SSH copy example
-    # 1. First you must add a ssh key to circle i.e. https://circleci.com/docs/2.0/add-ssh-key/
-    steps:
+      # Here is a standard SSH copy example
+      # 1. First you must add a ssh key to circle i.e. https://circleci.com/docs/2.0/add-ssh-key/
       - add_ssh_keys:
           fingerprints:
             - "8c:b1:28:88:d7:44:ec:d1:b0:26:7a:52:b6:72:42:2e"
